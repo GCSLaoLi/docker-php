@@ -1,0 +1,11 @@
+version: "3"
+services:
+  app-dev:
+    build:
+        context: .
+        dockerfile: Dockerfile-dev
+    image: gcslaoli/docker-php-dev
+    volumes: 
+        - ./src/:/var/www/html/
+    ports:
+      - 8080:80 # 宿主机端口:容器端口
